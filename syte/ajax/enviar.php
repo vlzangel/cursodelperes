@@ -18,32 +18,82 @@
     if ($response != null && $response->success) {
 		if( $terminos == "si" ){
 
-			$data = array(
-				"poblacion" => $poblacion,
-				"provincia" => $provincia,
-				"direccion" => $direccion,
-				"cp" => $cp,
-				"telefono" => $telefono,
-				"comentarios" => $comentarios
-			);
+			$entro = false;
 
-			$data = serialize($data);
+			switch ( $formulario ) {
+				case 'pedido':
 
-			$DB->query(
-				"INSERT INTO pedidos VALUES(
-					NULL,
-					'{$nombre}',
-					'{$nif}',
-					'{$email}',
-					'{$data}',
-					'Por pagar'
-				)"
-			);
+					$data = array(
+						"poblacion" => $poblacion,
+						"provincia" => $provincia,
+						"direccion" => $direccion,
+						"cp" => $cp,
+						"telefono" => $telefono,
+						"comentarios" => $comentarios
+					);
 
-			echo json_encode(array(
-				"code" => 1,
-				"data" => $_POST
-			));
+					$data = serialize($data);
+
+					$DB->query(
+						"INSERT INTO pedidos VALUES(
+							NULL,
+							'{$nombre}',
+							'{$nif}',
+							'{$email}',
+							'{$data}',
+							'Por pagar'
+						)"
+					);
+
+					echo json_encode(array(
+						"code" => 1,
+						"data" => $_POST
+					));
+
+					$entro = true;
+
+				break;
+
+				case 'contacto':
+
+					$DB->query(
+						"INSERT INTO mensajes VALUES(
+							NULL,
+							'{$nombre}',
+							'{$email}',
+							'{$telefono}',
+							'{$comentarios}',
+							'Sin Leer',
+							NOW()
+						)"
+					);
+
+					echo json_encode(array(
+						"code" => 1,
+						"data" => $_POST,
+						"sql" => "INSERT INTO mensajes VALUES(
+							NULL,
+							'{$nombre}',
+							'{$email}',
+							'{$telefono}',
+							'{$comentarios}',
+							'Sin Leer',
+							NOW()
+						)"
+					));
+
+					$entro = true;
+
+				break;
+
+			}
+			
+			if( !$entro ){
+				echo json_encode(array(
+					"code" => 0,
+					"error" => "Formulario no especificado o invalido"
+				));
+			}
 
 		}else{
 

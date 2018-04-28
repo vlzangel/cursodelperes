@@ -6,7 +6,9 @@
 	RewriteRule ^css/(.*)   /cursodelperes/syte/recursos/css/$1 [QSA,L]
 	RewriteRule ^img/(.*)   /cursodelperes/syte/recursos/imgs/$1 [QSA,L]
 	RewriteRule ^js/(.*)    /cursodelperes/syte/recursos/js/$1 [QSA,L]
-	RewriteRule ^fonts/(.*)    /cursodelperes/syte/recursos/fonts/$1 [QSA,L]
+  RewriteRule ^fonts/(.*)    /cursodelperes/syte/recursos/fonts/$1 [QSA,L]
+
+	RewriteRule ^lib/(.*)    /cursodelperes/core/lib/$1 [QSA,L]
 
   RewriteRule ^index\.php$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f

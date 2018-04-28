@@ -6,6 +6,8 @@
 	
 		<form role="form" id="form" >
 
+			<input type="hidden" name="formulario" value="pedido" />
+
 			<div class="form-group">
 				<label for="nombre" >Nombre y Apellidos</label>
 				<input type="text" class="form-control" id="nombre" name="nombre"  required />

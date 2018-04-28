@@ -1,8 +1,5 @@
 <?php
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
-
-	$pass = md5($password);
-
+	if( $password != "" ){ $pass = ", pass = '".md5($password)."'"; }	
 	$DB->query("
 		UPDATE 
 			clientes 
@@ -11,8 +8,7 @@
 			apellido = '{$apellido}',
 			dni = '{$dni}',
 			telefono = '{$telefono}',
-			email = '{$email}',
-			clave = '{$pass}'
+			email = '{$email}' {$pass}
 		WHERE 
 			id = {$ID};
 	");

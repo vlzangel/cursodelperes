@@ -1,15 +1,11 @@
 <?php
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
-
-	$pass = md5($password);
-
+	if( $password != "" ){ $pass = ", pass = '".md5($password)."'"; }	
 	$DB->query("
 		UPDATE 
 			users 
 		SET 
 			nombre = '{$nombre}',
-			email = '{$email}',
-			pass = '{$pass}'
+			email = '{$email}' {$pass}
 		WHERE 
 			id = {$ID};
 	");

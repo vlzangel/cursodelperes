@@ -1,10 +1,9 @@
-<?php
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
-?>
+<?php include dirname(dirname(__DIR__)).'/base.php';  ?>
 
 <form role="form" id="form" >
 
 	<input type="hidden" id="ID" name="ID" value="<?php echo $ID; ?>" />
+	<input type="hidden" id="file" name="file" value="delete" />
 
 	¿Esta seguro de eliminar este usuario?
 
@@ -17,6 +16,6 @@
 <script type="text/javascript">
 	jQuery("#form").on("submit", function(e){
 		e.preventDefault();
-		_delete( jQuery(this) );
+		ajax( jQuery(this) );
 	});
 </script>

@@ -1,8 +1,4 @@
 <?php
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
-
-	$pass = md5($password);
-
 	$DB->query("
 		UPDATE 
 			mensajes 

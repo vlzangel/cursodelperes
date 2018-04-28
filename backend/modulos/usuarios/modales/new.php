@@ -1,6 +1,7 @@
 <form role="form" id="form" >
 
 	<input type="hidden" id="ID" name="ID" value="<?php echo $r->id; ?>" />
+	<input type="hidden" id="file" name="file" value="new" />
 
 	<div class="form-group">
 		<label for="nombre" >Nombre </label>
@@ -28,6 +29,6 @@
 <script type="text/javascript">
 	jQuery("#form").on("submit", function(e){
 		e.preventDefault();
-		create( jQuery(this) );
+		ajax( jQuery(this) );
 	});
 </script>

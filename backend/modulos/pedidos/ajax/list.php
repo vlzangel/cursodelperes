@@ -1,8 +1,4 @@
 <?php
-	header('Content-Type: text/html; charset=utf-8');
-
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
-
 	$pedidos = $DB->get_results("SELECT * FROM pedidos");
 
 	$data["data"] = array();
@@ -26,10 +22,8 @@
 		        $pedido->nif,
 		        $pedido->email,
 		        $_data["telefono"],
-		        $extra,
-		        $_data["comentarios"],
 		        $pedido->estatus,
-		        "<span onclick='abrir_link( jQuery( this ) )' data-id='".$pedido->id."' data-titulo='Editar Pedido' data-modal='update' class='enlace' >Editar</span>
+		        "<span onclick='abrir_link( jQuery( this ) )' data-id='".$pedido->id."' data-titulo='Editar Pedido' data-modal='update' class='enlace' >Ver / Editar</span>
 				<span onclick='abrir_link( jQuery( this ) )' data-id='".$pedido->id."' data-titulo='Eliminar Pedido' data-modal='delete' class='enlace'>Eliminar</span>"
 		    );
 		}

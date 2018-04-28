@@ -1,6 +1,4 @@
 <?php
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
-
 	$DB->query("
 		DELETE FROM 
 			clientes 

@@ -1,41 +1,45 @@
 <?php
-	include __DIR__.'/admin/base.php';
+
+	$ACTUAL = __DIR__."/";
+	$CORE = dirname(__DIR__)."/core/";
+	$ADMIN = dirname(__DIR__)."/core/admin/";
+
+	include $CORE.'base.php';
 
 	if( $SESSION->get("user") !== false ){
 
 		$URL = explode("?", $_SERVER["REQUEST_URI"]);
 		$PAGE = str_replace($CONFIG["home"]."/backend/", "", $URL[0]);
 		
-		include __DIR__.'/admin/funciones/funciones.php';
+		include $ADMIN.'funciones/funciones.php';
 
-		include __DIR__.'/admin/partes/header.php';
-		if( file_exists(__DIR__.'/modulos/menu.php') ){
-			include __DIR__.'/modulos/menu.php';
+		include $ADMIN.'partes/header.php';
+		if( file_exists($ACTUAL.'/modulos/menu.php') ){
+			include $ACTUAL.'/modulos/menu.php';
 		}
-		include __DIR__.'/admin/partes/menu.php';
-		include __DIR__.'/admin/partes/mensajes.php';
-		// include __DIR__.'/admin/partes/notificaciones.php';
-		include __DIR__.'/admin/partes/busqueda.php';
+		include $ADMIN.'partes/menu.php';
+		include $ADMIN.'partes/mensajes.php';
+		include $ADMIN.'partes/busqueda.php';
 		
 		if( substr($PAGE, -1) == "/" ){
 			$PAGE = substr($PAGE, 0, -1);
 		}
 		
 		if( $PAGE == "" ){
-			include __DIR__.'/admin/partes/breadcrumb.php';
-			include __DIR__.'/modulos/index.php';
+			include $ADMIN.'partes/breadcrumb.php';
+			include $ACTUAL.'/modulos/index.php';
 		}else{
-			if( file_exists( __DIR__."/modulos/".$PAGE."/index.php" ) ){
-				include __DIR__.'/admin/partes/breadcrumb.php';
-				include( __DIR__."/modulos/".$PAGE."/index.php" );
+			if( file_exists( $ACTUAL."/modulos/".$PAGE."/index.php" ) ){
+				include $ADMIN.'partes/breadcrumb.php';
+				include( $ACTUAL."/modulos/".$PAGE."/index.php" );
 			}else{
-				include __DIR__.'/modulos/404.php';
+				include $ACTUAL.'/modulos/404.php';
 			}
 		}
 		
-		include __DIR__.'/admin/partes/footer.php';
+		include $ADMIN.'partes/footer.php';
 	}else{
-		include __DIR__.'/admin/login.php';
+		include $ADMIN.'login.php';
 	}
 	
 ?>

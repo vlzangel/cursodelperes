@@ -1,8 +1,4 @@
 <?php
-	header('Content-Type: text/html; charset=utf-8');
-
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
-
 	$users = $DB->get_results("SELECT * FROM users");
 
 	$data["data"] = array();

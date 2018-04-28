@@ -1,3 +1,3 @@
 <?php
-	include __DIR__.'/backend/admin/base.php';
+	include __DIR__.'/core/base.php';
 ?>

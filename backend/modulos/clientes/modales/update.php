@@ -1,10 +1,11 @@
 <?php
-	include dirname(dirname(dirname(__DIR__))).'/admin/base.php';
+	include dirname(dirname(__DIR__)).'/base.php'; 
 	$r = $DB->get_row( "SELECT * FROM clientes WHERE id='{$ID}' " );
 ?>
 <form role="form" id="form" >
 
 	<input type="hidden" id="ID" name="ID" value="<?php echo $r->id; ?>" />
+	<input type="hidden" id="file" name="file" value="update" />
 
 	<div class="form-group">
 		<label for="nombre" >Nombres </label>
@@ -38,7 +39,7 @@
 
 	<div class="form-group">
 		<label for="password" >Contrase&ntilde;a </label>
-		<input type="password" class="form-control" id="password" name="password" required />
+		<input type="password" class="form-control" id="password" name="password" />
 		<div class="val_error">Este campo es obligatorio</div>
 	</div>
 
@@ -50,6 +51,6 @@
 <script type="text/javascript">
 	jQuery("#form").on("submit", function(e){
 		e.preventDefault();
-		update( jQuery(this) );
+		ajax( jQuery(this) );
 	});
 </script>
