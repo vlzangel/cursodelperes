@@ -1,0 +1,70 @@
+table.dataTable .img_tabla {
+    height: 100px;
+    margin: 0px auto;
+    display: block;
+}
+
+table.dataTable th,
+.dataTables_length *,
+.dataTables_filter *
+ {
+    font-size: 11px !important;
+}
+
+table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
+    font-size: 12px !important;
+}
+.table thead th {
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+.dataTables_info,
+.pagination * {
+    font-size: 10px !important;
+}
+
+.container_listados {
+	padding: 0px;
+}
+
+#wpcontent, #wpfooter {
+    /*margin-left: 140px !important;*/
+}
+
+.table th, .table td {
+    padding: 8px;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 10px 0 0 !important;
+}
+
+input.readonly, input[readonly], textarea.readonly, textarea[readonly] {
+    background-color: #f6f6f6;
+    border: solid 1px #CCC;
+}
+
+.enlaces {
+	color: #158acd;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+a:focus, a:focus .media-icon img {
+    -webkit-box-shadow: 0 0 0 0px #FFF !important;
+    box-shadow: 0 0 0 0px #FFF !important;
+}
+
+.table th, .table td{
+    vertical-align: middle !important;
+}
+
+.enlace{
+    cursor: pointer;
+    color: blue;
+    padding: 0px 5px;
+}
+
+.enlace:hover{
+    font-weight: 600;
+}

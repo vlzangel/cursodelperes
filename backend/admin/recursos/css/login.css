@@ -1,0 +1,10 @@
+.login_error {
+	display: none;
+    text-align: center;
+    padding: 5px;
+    background: #f62f2f;
+    color: #FFF;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+}
