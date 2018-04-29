@@ -1,3 +1,9 @@
+<?php
+    function WEB(){
+        global $CONFIG;
+        return $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["HTTP_HOST"]."/".$CONFIG["home"]."/";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,10 +15,13 @@
 
         <title>Iniciar Sesi&oacute;n</title>
 
-        <link href="admin/recursos/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="admin/recursos/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="admin/recursos/css/sb-admin.css" rel="stylesheet">
-        <link href="admin/recursos/css/login.css" rel="stylesheet">
+        <link href="<?php echo WEB(); ?>lib/bootstrap/bootstrap.min.css?v=<?php echo time(); ?>" rel="stylesheet">
+        <link href="<?php echo WEB(); ?>admin/recursos/css/sb-admin.css?v=<?php echo time(); ?>" rel="stylesheet">
+        <link href="<?php echo WEB(); ?>admin/recursos/css/login.css?v=<?php echo time(); ?>" rel="stylesheet">
+
+        <script type="text/javascript">
+            var HOME = "<?php echo WEB(); ?>";
+        </script>
         
     </head>
 
@@ -30,13 +39,13 @@
                             <label for="pass">Contrase&ntilde;a</label>
                             <input class="form-control" id="pass" name="pass" type="password" placeholder="Contrase&ntilde;a" required />
                         </div>
-                        <input type="submit" class="btn btn-primary btn-block" />
+                        <input type="submit" id="btn-login" class="btn btn-primary btn-block" value="Ingresar" />
                     </form>
                     <div class="login_error">
                         Error, email o contrase&ntilde;a invalido
                     </div>
                     <div class="text-center">
-                        <a class="d-block small mt-3" href="../" >Ir a la WEB</a>
+                        <a class="d-block small mt-3" href="<?php echo WEB(); ?>" >Ir a la WEB</a>
                         <!-- <a class="d-block small mt-3" href="register.html">Register an Account</a> -->
                         <!-- <a class="d-block small" href="forgot-password.html">¿Se te olvidó tu contraseña?</a> -->
                     </div>
@@ -44,10 +53,10 @@
             </div>
         </div>
 
-        <script src="admin/recursos/vendor/jquery/jquery.min.js"></script>
-        <script src="admin/recursos/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="<?php echo WEB(); ?>lib/jquery/jquery.min.js?v=<?php echo time(); ?>"></script>
+        <script src="<?php echo WEB(); ?>lib/bootstrap/bootstrap.bundle.min.js?v=<?php echo time(); ?>"></script>
 
-        <script src="admin/recursos/js/login.js"></script>
+        <script src="<?php echo WEB(); ?>admin/recursos/js/login.js?v=<?php echo time(); ?>"></script>
 
     </body>
 </html>

@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    location.href = "<?php echo HOME(); ?>/clientes";
+    location.href = "<?php echo HOME(); ?>clientes";
 </script>
 
 <!-- <div class="card-body">

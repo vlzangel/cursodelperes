@@ -27,7 +27,7 @@
                         <div class="modal-body">Seleccione <strong>"Salir"</strong> a continuaci&oacute;n si está listo para finalizar su sesi&oacute;n actual.</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-primary" href="<?php echo HOME()."admin/ajax/logout.php"; ?>">Salir</a>
+                            <a class="btn btn-primary" href="<?php echo WEB()."admin/ajax/logout.php"; ?>">Salir</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
             <script src="<?php echo WEB(); ?>lib/datatables/responsive.bootstrap.min.js?v=<?php echo time(); ?>"></script>
             
             <!-- Custom scripts for all pages-->
-            <script src="<?php echo WEB(); ?>core/admin/recursos/js/sb-admin.js?v=<?php echo time(); ?>"></script>
+            <script src="<?php echo WEB(); ?>admin/recursos/js/sb-admin.js?v=<?php echo time(); ?>"></script>
 
             <?php
                 if( count($CSSs) > 0 ){

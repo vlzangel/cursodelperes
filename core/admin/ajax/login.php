@@ -1,5 +1,5 @@
 <?php
-	include ((dirname(__DIR__))).'/base.php';
+	include (dirname(dirname(__DIR__))).'/base.php';
 
 	extract($_POST);
 

@@ -616,7 +616,7 @@ footer.sticky-footer {
 
     .card-body > div {
         padding: 10px;
-        margin: 0px 10px;
+        margin: 10px 10px 0px;
     }
 
     .login_error {
@@ -641,7 +641,7 @@ footer.sticky-footer {
         display: block !important;
     }
 
-    .card-body > div {
+    .card-body > div:first-child {
         padding: 0px 10px;
     }
 
