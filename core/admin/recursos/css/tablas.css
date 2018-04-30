@@ -8,11 +8,11 @@ table.dataTable th,
 .dataTables_length *,
 .dataTables_filter *
  {
-    font-size: 11px !important;
+    font-size: 15px !important;
 }
 
 table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
-    font-size: 12px !important;
+    font-size: 15px !important;
 }
 .table thead th {
     border-bottom: 1px solid #e9ecef !important;
@@ -20,7 +20,7 @@ table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td
 
 .dataTables_info,
 .pagination * {
-    font-size: 10px !important;
+    font-size: 15px !important;
 }
 
 .container_listados {

@@ -19,7 +19,7 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Nombres y Apellidos</th>
+					<th>Nombre</th>
 					<th>NIF</th>
 					<th>E-mail</th>
 					<th>Tel&eacute;fono</th>
@@ -30,7 +30,7 @@
 			<tfoot>
 				<tr>
 					<th>ID</th>
-					<th>Nombres y Apellidos</th>
+					<th>Nombre</th>
 					<th>NIF</th>
 					<th>E-mail</th>
 					<th>Tel&eacute;fono</th>

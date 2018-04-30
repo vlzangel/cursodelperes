@@ -1,5 +1,5 @@
 <?php
-	if( $password != "" ){ $pass = ", pass = '".md5($password)."'"; }	
+	if( $password != "" ){ $pass = ", clave = '".md5($password)."'"; }	
 	$DB->query("
 		UPDATE 
 			clientes 

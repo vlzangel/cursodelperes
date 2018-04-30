@@ -5,6 +5,7 @@ html {
 
 body {
   overflow-x: hidden;
+  font-size: 17px;
 }
 
 body.sticky-footer {
@@ -661,4 +662,16 @@ footer.sticky-footer {
     table.dataTable>tbody>tr.child ul.dtr-details>li {
         overflow: hidden;
     }
+}
+
+.dropdown-message.small {
+    font-size: 14px;
+}
+
+.dropdown-item .small, small {
+  font-size: 15px;
+}
+
+.dropdown-menu.show {
+    min-width: 400px;
 }

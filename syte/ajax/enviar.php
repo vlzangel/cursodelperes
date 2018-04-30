@@ -4,7 +4,7 @@
 
 	extract($_POST);
 
-    $secret = "6LfCD0oUAAAAAJgVTkztrNVV-s44JHc_5g2W6i8B";
+/*    $secret = "6LfCD0oUAAAAAJgVTkztrNVV-s44JHc_5g2W6i8B";
 
     $response = null;
     $reCaptcha = new ReCaptcha($secret);
@@ -15,7 +15,7 @@
         );
     }
 
-    if ($response != null && $response->success) {
+    if ($response != null && $response->success) {*/
 		if( $terminos == "si" ){
 
 			$entro = false;
@@ -102,10 +102,10 @@
 				"error" => "Debe aceptar los t&eacute;rminos y condiciones"
 			));
 		}
-	} else {
+	/*} else {
         echo json_encode(array(
             "error" => "Captcha no valido",
             "code" => 0
         ));
-    }
+    }*/
 ?>
