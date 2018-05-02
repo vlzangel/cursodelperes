@@ -1,18 +1,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /cursodelperes/
-
-	RewriteRule ^ajax/(.*)  /cursodelperes/syte/ajax/$1 [QSA,L]
-	RewriteRule ^css/(.*)   /cursodelperes/syte/recursos/css/$1 [QSA,L]
-	RewriteRule ^img/(.*)   /cursodelperes/syte/recursos/imgs/$1 [QSA,L]
-	RewriteRule ^js/(.*)    /cursodelperes/syte/recursos/js/$1 [QSA,L]
-  RewriteRule ^fonts/(.*)    /cursodelperes/syte/recursos/fonts/$1 [QSA,L]
-
-  RewriteRule ^lib/(.*)    /cursodelperes/core/lib/$1 [QSA,L]
-	RewriteRule ^admin/(.*)    /cursodelperes/core/admin/$1 [QSA,L]
-
   RewriteRule ^index\.php$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /cursodelperes/index.php [L]
+  RewriteRule . index.php [L]
 </IfModule>

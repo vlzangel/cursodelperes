@@ -4,6 +4,6 @@
 		"host" => "localhost",
 		"user" => "root",
 		"pass" => "",
-		"home" => "cursodelperes"
+		"titulo" => "Curso del PER",
 	);
 ?>

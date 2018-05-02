@@ -1,1 +1,0 @@
-<?php include dirname(dirname(__DIR__)).'/core/base.php'; ?>

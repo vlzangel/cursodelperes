@@ -1,0 +1,19 @@
+.notas {
+    border: 1px solid #ced4da;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0px;
+    box-shadow: 1px 1px 1px #777;
+}
+
+.notas_item {
+    overflow: hidden;
+    border-bottom: solid 1px #aeaeae;
+    padding: 0px 5px 10px;
+}
+
+.notas_item span {
+    float: right;
+    font-size: 14px;
+    font-weight: 500;
+}
